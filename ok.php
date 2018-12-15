@@ -61,9 +61,6 @@ $CY="\e[36m"; $GR="\e[2;32m"; $OG="\e[92m"; $WH="\e[37m"; $RD="\e[31m"; $YL="\e[
 $BL="\e[0;30m";
 $II = Submit($data['url'],array('by'=>$data['by']));
 $ikeh = json_decode($II,true);
-if($ikeh['status']=='fail'){
-echo"\n\e[1;31m".$ikeh['message']."\n\e[37m";
-}else{
 echo"\n\e[1m\e[37mInstagram Generate Cookie Version ".$ikeh['data']['sign_version']."";
 echo"\n\e[2;32mhttp://www.msweb.com.pk";
 echo"\n\e[31mCode By Muhammad Saleem\n";
@@ -95,8 +92,5 @@ echo"\n\e[0m".$cookiee."\n\n";
 echo"\e[1;31m  |".json_decode($login['1'])->error_title."\n";
 }	else{
 echo"\e[1;31m  |".json_decode($login['1'])->error_type."\n";
-}
-
 echo$WH;
 }
-	
